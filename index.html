@@ -129,7 +129,7 @@
                         Challenge
                     </h1>
                     <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-                        Synthesize pseudo-CT from PET, MRI, and Topogram to enable ultra-low dose whole-body imaging on LAFOV scanners.
+                        Synthesize pseudo-CT from NAC-PET, MRI, and 2D Topogram to enable CT-less reconstruction of PET images.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                         <a href="#about" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-shadow text-lg">
@@ -154,6 +154,7 @@
                         <img src="images/organizations/rigshospitalet.png" alt="Rigshospitalet" class="h-16 w-auto object-contain opacity-80">
                         <img src="images/organizations/dtu-logo.png" alt="Technical University of Denmark" class="h-16 w-auto object-contain opacity-80">
                         <img src="images/organizations/ku_logo_dk_hh.png" alt="University of Copenhagen" class="h-16 w-auto object-contain opacity-80">
+                        <img src="images/organizations/ku_leuven.png" alt="KU Leuven" class="h-16 w-auto object-contain opacity-80">
                     </div>
                 </div>
             </div>
@@ -164,36 +165,34 @@
     <section id="about" class="py-20 px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12">About the Challenge</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">About the Challenge</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Modern PET scanners are incredibly sensitive, but the CT component used for attenuation correction
+                    remains the dominant source of radiation. Can we eliminate the CT scan entirely while maintaining
+                    accurate PET reconstructions?
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <!-- Task 1 -->
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-blue-600">
-                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Task 1: CT-Space Evaluation</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Generate pseudo-CT attenuation maps evaluated in CT-space. Performance is quantified by the mean absolute relative error between the synthesized pseudo-mu-map and the reference CT-derived mu-map.
+            <!-- Challenge Introduction -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Your Task</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Synthesize <span class="font-semibold text-blue-600">pseudo-CT images</span> from
+                        non-attenuation-corrected PET, whole-body MRI, and 2D topograms. Your pseudo-CTs will be used to
+                        reconstruct PET images, which are evaluated against reference CT-based reconstructions across both
+                        <span class="font-semibold">static and dynamic imaging protocols</span>.
                     </p>
-                </div>
-
-                <!-- Task 2 -->
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-purple-600">
-                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Task 2: PET-Space Evaluation</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Generate attenuation maps evaluated in PET-space with closed-loop reconstruction. Performance is quantified by comparing the pseudo-AC PET with the reference CT-AC PET using STIR reconstruction software.
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        You'll work with a unique <span class="font-semibold text-purple-600">multimodal dataset</span> of
+                        100 healthy volunteers with age- and sex-stratified whole-body PET/CT and MRI acquisitions, along with
+                        open-source reconstruction tools to enable closed-loop optimization—previously only possible at sites
+                        with proprietary vendor software.
                     </p>
                 </div>
             </div>
+
+
 
 <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 flex items-center justify-center min-h-[400px] mb-16">
     <img 
@@ -203,21 +202,96 @@
     >
 </div>
 
+
+            <!-- Key Features Heading -->
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold">What Makes This Challenge Unique?</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-blue-600">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Multimodal Fusion</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Combine information from whole-body NAC-PET, MRI, and 2D Topograms to synthesize accurate pseudo-CT images for attenuation correction reconstruction.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-purple-600">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Closed-Loop Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Optimize directly on reconstructed PET images using provided reconstruction containers - no need for proprietary vendor software.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-pink-600">
+                    <div class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Dose Reduction</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Enable CT-less imaging to reduce radiation exposure for dose-sensitive populations, and enable attenuation correction in PET/MRI studies.
+                    </p>
+                </div>
+            </div>
+
+
+
             <!-- Overview -->
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
                 <h3 class="text-2xl font-bold mb-6">Challenge Abstract</h3>
                 <div class="prose prose-lg max-w-none text-gray-600">
                     <p class="mb-4">
-The advent of Long Axial Field-of-View (LAFOV) PET scanners has shifted the dosimetry paradigm in PET/CT imaging. The high sensitivity of these systems allows for substantial reductions in radiotracer activity, rendering the volumetric CT component the dominant source of ionizing radiation. To facilitate ultra-low dose PET protocols, which are preferred for pediatric and obstetric cohorts, it can be desirable to eliminate the volumetric CT entirely. However, in addition to providing anatomical context, the CT is needed for the attenuation correction (AC) and reconstruction of the PET image, as the attenuation map (mu-map) is often derived directly from the CT. 
-                    <p class="mb-4">
-Addressing this, the Big Cross-Modal Attenuation Correction (BIC-MAC) challenge tasks participants with synthesizing a 3D pseudo-CT (mu-map) in the PET coordinate space using other available modalities. We present a multimodal dataset comprising whole-body PET, CT, Topogram (CT-scout), and MRI for 100 healthy volunteers. The cohort is age- and sex-stratified, and data were acquired on modern Siemens Quadra and Siemens VIDA scanners. Participants will be provided with a training set of 80 Non-Attenuation Corrected (NAC) 18F-FDG PET images, scatter-maps, and sinograms, scan-planning Topograms, and same-day MRI DIXON images, alongside the reference CT-based mu-maps and the reference CT-AC PET images. 
+
+
+
+
+
+
+
+The advent of Long Axial Field-of-View (LAFOV) PET scanners has shifted the dosimetry paradigm in PET/CT 
+imaging. The high sensitivity of these systems allows for substantial reductions in radiotracer activity, rendering 
+the volumetric CT component the dominant source of ionizing radiation. For dose-sensitive populations such as 
+pediatric and obstetric cohorts, eliminating the volumetric CT entirely is highly desirable. However, the CT serves 
+a dual purpose: providing anatomical context and enabling attenuation correction (AC) for PET reconstruction, 
+as the attenuation map is typically derived directly from the CT. Similarly, whole-body studies acquired on 
+PET/MRI systems require estimation of the attenuation map from MR images. In both scenarios, the absence of 
+a CT poses a reconstruction challenge.
+
+
+
                     </p>
                     <p class="mb-4">
-The challenge comprises two tasks which both concern the generation of a mu-map, but which are evaluated in either CT-space or PET-space. For the CT-space, performance is quantified by the mean absolute relative error between the pseudo-mu-map and CT-mu-map, and for the PET-space, between the pseudo-AC PET and CT-AC PET. In the latter case, a docker image is provided with STIR PET reconstruction software to enable closed loop optimization on the training set.  
-                    </p>
+To address this, the Big Cross-Modal Attenuation Correction (BIC-MAC) challenge tasks participants with 
+synthesizing a 3D pseudo-CT from other available modalities. We present a novel multimodal dataset comprising 
+whole-body PET, CT, Topogram (scout radiograph), and MRI for 100 healthy volunteers. The cohort is age- and 
+sex-stratified, with data acquired on Siemens Biograph Vision Quadra and Siemens MAGNETOM Vida 
+scanners. Participants will receive a training set of 80 cases containing Non-Attenuation Corrected (NAC) 
+[18F]FDG PET images, scan-planning Topograms, and same-day DIXON MRI, alongside reference CT and CT-based attenuation-corrected PET (CTAC-PET) images. Critically, we also provide scatter maps, sinograms, and 
+Docker containers with open-source reconstruction software, enabling closed-loop optimization on the training 
+set—a capability previously restricted to hospital sites with access to proprietary vendor software.                    </p>
                                         <p>
-A defining technical characteristic of this challenge is the integration of modalities of differing dimensions acquired in differing geometries. While the 3D NAC-PET and 2D Topograms are spatially aligned with the target mu-map, both lack anatomical fidelity. In contrast, whole-body MRI offers high bone and soft tissue contrast but is acquired in a different scanner geometry with different body deformations. Consequently, to approximate the mu-map accurately, participants must develop algorithms capable of fusing the unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D Topograms.                     </p>
-                    </p>
+The challenge comprises a single task: generate a pseudo-CT from the available input modalities. The pseudo-CT will be used to reconstruct PET images, which are then quantitatively compared against reference CTAC-PET images. Both static and dynamic PET reconstructions are evaluated to assess downstream accuracy across 
+different clinical contexts. A defining technical characteristic of this challenge is the integration of modalities with 
+different dimensionalities and acquisition geometries. While the 3D NAC-PET and 2D Topograms are spatially 
+aligned with the target attenuation map, both lack anatomical detail. In contrast, whole-body MRI offers high 
+bone and soft-tissue contrast but is acquired in a different scanner geometry with different patient positioning 
+and body deformations. Consequently, participants must develop algorithms capable of fusing spatially 
+unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D Topograms.                    </p>
                 </div>
             </div>
         </div>
@@ -238,12 +312,12 @@ A defining technical characteristic of this challenge is the integration of moda
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-600">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Registration Opens</h3>
-                            <p class="text-gray-600">The challenge starts and the validation leaderboard opens</p>
+                            <h3 class="text-xl font-bold mb-2">Training Data Released</h3>
+                            <p class="text-gray-600">Training data (n=80 cases) released on Hugging Face</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-semibold">
-                                1 April
+                                March 15, 2026
                             </span>
                         </div>
                     </div>
@@ -253,12 +327,12 @@ A defining technical characteristic of this challenge is the integration of moda
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-purple-600">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Evaluation opens</h3>
-                            <p class="text-gray-600">Containerized solutions can be submitted for evaluation.</p>
+                            <h3 class="text-xl font-bold mb-2">Registration Opens</h3>
+                            <p class="text-gray-600">Registration opens via Google Forms</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-purple-50 text-purple-700 px-4 py-2 rounded-lg font-semibold">
-                                15 June
+                                April 1, 2026
                             </span>
                         </div>
                     </div>
@@ -268,12 +342,12 @@ A defining technical characteristic of this challenge is the integration of moda
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-pink-600">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Submission Deadline</h3>
-                            <p class="text-gray-600">Submission deadline for containerized solutions.</p>
+                            <h3 class="text-xl font-bold mb-2">Pre-evaluation Period Opens</h3>
+                            <p class="text-gray-600">Teams can submit for pre-evaluation on training data</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-pink-50 text-pink-700 px-4 py-2 rounded-lg font-semibold">
-                                31 August
+                                May 15, 2026
                             </span>
                         </div>
                     </div>
@@ -283,27 +357,57 @@ A defining technical characteristic of this challenge is the integration of moda
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-indigo-600">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Presentation Invitations</h3>
-                            <p class="text-gray-600">Invitations sent to selected participants for presentations at MICCAI.</p>
+                            <h3 class="text-xl font-bold mb-2">Final Evaluation Period Opens</h3>
+                            <p class="text-gray-600">Teams can submit Docker containers for final evaluation on test set</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-indigo-50 text-indigo-700 px-4 py-2 rounded-lg font-semibold">
-                                5 September
+                                June 15, 2026
                             </span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Timeline Item 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-green-600">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Registration Closes</h3>
+                            <p class="text-gray-600">Final deadline for team registration</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <span class="inline-block bg-green-50 text-green-700 px-4 py-2 rounded-lg font-semibold">
+                                August 15, 2026
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-orange-600">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Submission Deadline</h3>
+                            <p class="text-gray-600">Pre-evaluation and final evaluation close</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <span class="inline-block bg-orange-50 text-orange-700 px-4 py-2 rounded-lg font-semibold">
+                                August 24, 2026
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 shadow-lg text-white">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">MICCAI 2026 Workshop</h3>
-                            <p class="text-blue-100">Winner presentations and awards ceremony at the 2-hour conference event.</p>
+                            <h3 class="text-xl font-bold mb-2">Winners Announced</h3>
+                            <p class="text-blue-100">CodaBench leaderboard updated with test scores; top three winners announced</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg font-semibold">
-                                TBD 2026
+                                September 1, 2026
                             </span>
                         </div>
                     </div>
@@ -316,7 +420,7 @@ A defining technical characteristic of this challenge is the integration of moda
     <section id="organizers" class="py-20 px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Organizers</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Organizing Committee</h2>
                 <p class="text-xl text-gray-600">
                     Meet the team behind the challenge
                 </p>
@@ -324,7 +428,7 @@ A defining technical characteristic of this challenge is the integration of moda
 
             <!-- Organizing Committee -->
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
-                <h3 class="text-2xl font-bold mb-8 text-center">Organizing Committee</h3>
+
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="text-center">
                         <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
@@ -351,6 +455,33 @@ A defining technical characteristic of this challenge is the integration of moda
                         <h4 class="font-bold text-lg mb-1">Flemming Littrup Andersen</h4>
                         <p class="text-gray-600 text-sm mb-2">Professor, Rigshospitalet</p>
                         <p class="text-gray-500 text-sm">Co-Organizer</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/Georg_person.jpg" alt="Georg Schramm" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Georg Schramm</h4>
+                        <p class="text-gray-600 text-sm mb-2">Assistant Professor, KU Leuven</p>
+                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                    </div>
+
+                    <div class="text-center">
+                       <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/Kirsten_person.jpeg" alt="Kirsten Korsholm" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Kirsten Korsholm</h4>
+                        <p class="text-gray-600 text-sm mb-2">MD, Rigshospitalet</p>
+                        <p class="text-gray-500 text-sm">Clinical Team</p>
+                    </div>
+
+                    <div class="text-center">
+                       <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/Ian_person.jpeg" alt="Ian Law" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Ian Law</h4>
+                        <p class="text-gray-600 text-sm mb-2">Professor, Rigshospitalet</p>
+                        <p class="text-gray-500 text-sm">Clinical Team</p>
                     </div>
                 </div>
             </div>
