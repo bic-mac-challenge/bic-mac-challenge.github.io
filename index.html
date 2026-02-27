@@ -150,11 +150,13 @@
                     </div>
 
                     <!-- Organization Logos -->
-                    <div class="flex justify-center items-center gap-8 mt-8">
+                    <div class="flex justify-center items-center gap-8 mt-8 flex-wrap">
                         <img src="images/organizations/rigshospitalet.png" alt="Rigshospitalet" class="h-16 w-auto object-contain opacity-80">
                         <img src="images/organizations/dtu-logo.png" alt="Technical University of Denmark" class="h-16 w-auto object-contain opacity-80">
                         <img src="images/organizations/ku_logo_dk_hh.png" alt="University of Copenhagen" class="h-16 w-auto object-contain opacity-80">
                         <img src="images/organizations/ku_leuven.png" alt="KU Leuven" class="h-16 w-auto object-contain opacity-80">
+                        <img src="images/organizations/qim.png" alt="QIM" class="h-16 w-auto object-contain opacity-80">
+                        <img src="images/organizations/synerbi.png" alt="SyneRBI" class="h-16 w-auto object-contain opacity-80">
                     </div>
                 </div>
             </div>
@@ -231,7 +233,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Closed-Loop Optimization</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Optimize directly on reconstructed PET images using provided reconstruction containers - no need for proprietary vendor software.
+                        Optimize directly on reconstructed PET images using provided <a href="https://stir.sourceforge.net/" target="_blank" class="text-blue-600 hover:underline">STIR</a> reconstruction containers - no need for proprietary vendor software.
                     </p>
                 </div>
 
@@ -280,10 +282,10 @@ To address this, the Big Cross-Modal Attenuation Correction (BIC-MAC) challenge 
 synthesizing a 3D pseudo-CT from other available modalities. We present a novel multimodal dataset comprising 
 whole-body PET, CT, Topogram (scout radiograph), and MRI for 100 healthy volunteers. The cohort is age- and 
 sex-stratified, with data acquired on Siemens Biograph Vision Quadra and Siemens MAGNETOM Vida 
-scanners. Participants will receive a training set of 80 cases containing Non-Attenuation Corrected (NAC) 
+scanners. Participants will receive a training set of 75 cases containing Non-Attenuation Corrected (NAC) 
 [18F]FDG PET images, scan-planning Topograms, and same-day DIXON MRI, alongside reference CT and CT-based attenuation-corrected PET (CTAC-PET) images. Critically, we also provide scatter maps, sinograms, and 
 Docker containers with open-source reconstruction software, enabling closed-loop optimization on the training 
-set—a capability previously restricted to hospital sites with access to proprietary vendor software.                    </p>
+set - a capability previously restricted to hospital sites with access to proprietary vendor software.                    </p>
                                         <p>
 The challenge comprises a single task: generate a pseudo-CT from the available input modalities. The pseudo-CT will be used to reconstruct PET images, which are then quantitatively compared against reference CTAC-PET images. Both static and dynamic PET reconstructions are evaluated to assess downstream accuracy across 
 different clinical contexts. A defining technical characteristic of this challenge is the integration of modalities with 
@@ -312,12 +314,12 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-600">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Training Data Released</h3>
-                            <p class="text-gray-600">Training data (n=80 cases) released on Hugging Face</p>
+                            <h3 class="text-xl font-bold mb-2">Data Released</h3>
+                            <p class="text-gray-600">Training (n=75) and validation (n=4) cases released on Hugging Face</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-semibold">
-                                March 15, 2026
+                                April 1, 2026
                             </span>
                         </div>
                     </div>
@@ -343,7 +345,7 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div class="flex-1">
                             <h3 class="text-xl font-bold mb-2">Pre-evaluation Period Opens</h3>
-                            <p class="text-gray-600">Teams can submit for pre-evaluation on training data</p>
+                            <p class="text-gray-600">Teams can submit for pre-evaluation on validation data</p>
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-pink-50 text-pink-700 px-4 py-2 rounded-lg font-semibold">
@@ -392,7 +394,7 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         </div>
                         <div class="mt-4 md:mt-0 md:ml-8">
                             <span class="inline-block bg-orange-50 text-orange-700 px-4 py-2 rounded-lg font-semibold">
-                                August 24, 2026
+                                August 15, 2026
                             </span>
                         </div>
                     </div>
@@ -465,6 +467,84 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         <p class="text-gray-600 text-sm mb-2">Assistant Professor, KU Leuven</p>
                         <p class="text-gray-500 text-sm">Co-Organizer</p>
                     </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/vaibhav.jpeg" alt="Vaibhav Bahel" class="w-full h-full object-cover scale-150">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Vaibhav Bahel</h4>
+                        <p class="text-gray-600 text-sm mb-2">Student, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/Nanna_person.png" alt="Nanna Overbeck Petersen" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Nanna Overbeck Petersen</h4>
+                        <p class="text-gray-600 text-sm mb-2">PhD Student, Rigshospitalet</p>
+                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/kris.jpeg" alt="Kris Thielemans" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Kris Thielemans</h4>
+                        <p class="text-gray-600 text-sm mb-2">Professor, University College London</p>
+                        <p class="text-gray-500 text-sm">STIR Team</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/tsoumpas.webp" alt="Charalampos Tsoumpas" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Charalampos Tsoumpas</h4>
+                        <p class="text-gray-600 text-sm mb-2">Professor, University of Groningen</p>
+                        <p class="text-gray-500 text-sm">STIR Team</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden bg-gray-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Zekai Li</h4>
+                        <p class="text-gray-600 text-sm mb-2">PhD Candidate, University of Groningen</p>
+                        <p class="text-gray-500 text-sm">STIR Team</p>
+                    </div>
+
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/nikos.jpeg" alt="Nikos Efthymiou" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Nikos Efthymiou</h4>
+                        <p class="text-gray-600 text-sm mb-2">Senior Scientist, University of Groningen</p>
+                        <p class="text-gray-500 text-sm">STIR Team</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/felipe.webp" alt="Felipe Delestro Matos" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Felipe Delestro Matos</h4>
+                        <p class="text-gray-600 text-sm mb-2">Senior Researcher, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-sm">Infrastructure Team</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/jakob.webp" alt="Jakob Sauer Jørgensen" class="w-full h-full object-cover object-center">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Jakob Sauer Jørgensen</h4>
+                        <p class="text-gray-600 text-sm mb-2">Associate Professor, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-sm">Infrastructure Team</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="images/organizers/kjer.jpeg" alt="Hans Martin Kjer" class="w-full h-full object-cover object-top">
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Hans Martin Kjer</h4>
+                        <p class="text-gray-600 text-sm mb-2">Associate Professor, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-sm">Infrastructure Team</p>
+                    </div>
 
                     <div class="text-center">
                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
@@ -483,6 +563,9 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         <p class="text-gray-600 text-sm mb-2">Professor, Rigshospitalet</p>
                         <p class="text-gray-500 text-sm">Clinical Team</p>
                     </div>
+
+
+
                 </div>
             </div>
         </div>
@@ -664,6 +747,40 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
         </div>
     </section>
 
+    <!-- Acknowledgements -->
+    <section id="acknowledgements" class="py-20 px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Acknowledgements</h2>
+            <p class="text-xl text-gray-600 mb-16 max-w-2xl mx-auto">
+                We are grateful to the following organizations for their generous support of the BIC-MAC Challenge.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- QIM -->
+                <a href="https://qim.dk/" target="_blank" rel="noopener noreferrer" class="bg-gray-50 rounded-2xl p-10 flex flex-col items-center shadow-sm hover:shadow-md transition-shadow group">
+                    <img src="images/organizations/qim.png" alt="QIM logo" class="h-16 object-contain mb-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">QIM</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-3">
+                        Center for Quantification of Imaging Data from Max IV, Technical University of Denmark.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Providing compute resources for running reconstructions during the final evaluation.
+                    </p>
+                </a>
+                <!-- SyneRBI -->
+                <a href="https://www.ccpsynerbi.ac.uk/" target="_blank" rel="noopener noreferrer" class="bg-gray-50 rounded-2xl p-10 flex flex-col items-center shadow-sm hover:shadow-md transition-shadow group">
+                    <img src="images/organizations/synerbi.png" alt="SyneRBI logo" class="h-16 object-contain mb-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">SyneRBI</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-3">
+                        Collaborative Computational Project in Synergistic Reconstruction for Biomedical Imaging.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Supporting the prize pool, challenge design, and enabling STIR to work with Quadra data.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12 px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
@@ -681,6 +798,7 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         <li><a href="#timeline" class="hover:text-white transition-colors">Timeline</a></li>
                         <li><a href="#organizers" class="hover:text-white transition-colors">Organizers</a></li>
                         <li><a href="#participate" class="hover:text-white transition-colors">Participate</a></li>
+                        <li><a href="#acknowledgements" class="hover:text-white transition-colors">Acknowledgements</a></li>
                     </ul>
                 </div>
                 <div>
