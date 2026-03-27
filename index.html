@@ -93,7 +93,7 @@
                     <a href="#organizers" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Organizers</a>
                     <a href="#participate" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Participate</a>
                 </div>
-                <a href="#participate" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
+                <a href="https://www.codabench.org/competitions/12555/#/participate-tab" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
                     Register Now
                 </a>
             </div>
@@ -187,7 +187,7 @@
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
                         You'll work with a unique <span class="font-semibold text-purple-600">multimodal dataset</span> of
-                        100 healthy volunteers with age- and sex-stratified whole-body PET/CT and MRI acquisitions, along with
+                        99 healthy volunteers with age- and sex-stratified whole-body PET/CT and MRI acquisitions, along with
                         open-source reconstruction tools to enable closed-loop optimization—previously only possible at sites
                         with proprietary vendor software.
                     </p>
@@ -280,7 +280,7 @@ a CT poses a reconstruction challenge.
                     <p class="mb-4">
 To address this, the Big Cross-Modal Attenuation Correction (BIC-MAC) challenge tasks participants with 
 synthesizing a 3D pseudo-CT from other available modalities. We present a novel multimodal dataset comprising 
-whole-body PET, CT, Topogram (scout radiograph), and MRI for 100 healthy volunteers. The cohort is age- and 
+whole-body PET, CT, Topogram (scout radiograph), and MRI for 99 healthy volunteers. The cohort is age- and 
 sex-stratified, with data acquired on Siemens Biograph Vision Quadra and Siemens MAGNETOM Vida 
 scanners. Participants will receive a training set of 75 cases containing Non-Attenuation Corrected (NAC) 
 [18F]FDG PET images, scan-planning Topograms, and same-day DIXON MRI, alongside reference CT and CT-based attenuation-corrected PET (CTAC-PET) images. Critically, we also provide scatter maps, sinograms, and 
@@ -310,21 +310,6 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
             </div>
 
             <div class="space-y-6">
-                <!-- Timeline Item 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Data Released</h3>
-                            <p class="text-gray-600">Training (n=75) and validation (n=4) cases released on Hugging Face</p>
-                        </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-semibold">
-                                April 1, 2026
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Timeline Item 2 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-purple-600">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -339,6 +324,21 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         </div>
                     </div>
                 </div>
+                <!-- Timeline Item 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-600">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Challenge starts (data released)</h3>
+                            <p class="text-gray-600">Training (n=75) and validation (n=4) cases released on Hugging Face</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <span class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-semibold">
+                                April 8, 2026
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- Timeline Item 3 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-pink-600">
@@ -593,20 +593,26 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         <h3 class="text-2xl font-bold">Codabench</h3>
                     </div>
                     <p class="text-lg text-blue-100 mb-6">
-                        Official challenge platform with rules, and submissions:
+                        Official challenge platform:
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
                             <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Rules, details, and evaluation metrics</span>
+                            <span>Rules</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Submission instructions and leaderboard</span>
+                            <span>Validation set submissions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Live leaderboard</span>
                         </li>
                     </ul>
                     <a href="https://www.codabench.org/competitions/12555/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
@@ -628,20 +634,33 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         <h3 class="text-2xl font-bold text-gray-900">GitHub</h3>
                     </div>
                     <p class="text-lg text-gray-600 mb-6">
-                        Code resources to get you started:
+                        Ressources for getting started:
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
                             <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">Baseline code and reconstruction containers</span>
+                            <span class="text-gray-700">HowTos, FAQ, hints, and reconstruction nice-to-know
+                                </span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">Validation metrics</span>
+                            <span class="text-gray-700">Reconstruction containers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Baseline model and code</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Scoring metrics</span>
                         </li>
                     </ul>
                     <a href="https://github.com/bic-mac-challenge/challenge-codebase" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-colors">
@@ -667,19 +686,19 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
 
             <!-- Three Steps -->
             <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <!-- Step 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow relative">
+                <!-- Step 1 -->
+                <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 shadow-md hover:shadow-xl hover:border-blue-400 transition-all relative">
                     <div class="absolute -top-4 left-8">
                         <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             1
                         </div>
                     </div>
                     <div class="mt-6">
-                        <h3 class="text-xl font-bold mb-3">Sign Up on Codabench</h3>
+                        <h3 class="text-xl font-bold mb-3 text-blue-900">Sign Up on Codabench</h3>
                         <p class="text-gray-600 mb-6">
                             Create an account and register for the challenge on the Codabench platform.
                         </p>
-                        <a href="https://www.codabench.org/competitions/12555/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                        <a href="https://www.codabench.org/competitions/12555/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
                             Go to Codabench
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -687,19 +706,19 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                         </a>
                     </div>
                 </div>
-                <!-- Step 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow relative">
+                <!-- Step 2 -->
+                <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-8 shadow-md hover:shadow-xl hover:border-purple-400 transition-all relative">
                     <div class="absolute -top-4 left-8">
                         <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             2
                         </div>
                     </div>
                     <div class="mt-6">
-                        <h3 class="text-xl font-bold mb-3">Register Your Team</h3>
+                        <h3 class="text-xl font-bold mb-3 text-purple-900">Register Your Team</h3>
                         <p class="text-gray-600 mb-6">
                             Fill out the team registration form to officially join the challenge.
                         </p>
-                        <a href="https://forms.gle/nNHhRw37EkSC2GE89" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                        <a href="https://forms.gle/nNHhRw37EkSC2GE89" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors">
                             Register Here
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -708,20 +727,19 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                     </div>
                 </div>
 
-
                 <!-- Step 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow relative">
+                <div class="bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-8 shadow-md hover:shadow-xl hover:border-indigo-400 transition-all relative">
                     <div class="absolute -top-4 left-8">
                         <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             3
                         </div>
                     </div>
                     <div class="mt-6">
-                        <h3 class="text-xl font-bold mb-3">Download Dataset</h3>
+                        <h3 class="text-xl font-bold mb-3 text-indigo-900">Download Dataset</h3>
                         <p class="text-gray-600 mb-6">
                             Request access and download the challenge dataset from Hugging Face.
                         </p>
-                        <a href="https://huggingface.co/datasets/DEPICT-RH/BIC-MAC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                        <a href="https://huggingface.co/datasets/DEPICT-RH/BIC-MAC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 transition-colors">
                             Get Data on Hugging Face
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
