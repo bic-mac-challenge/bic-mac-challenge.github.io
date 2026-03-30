@@ -88,9 +88,9 @@
                 <a href="#" class="text-xl font-bold gradient-text">BIC-MAC</a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#about" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">About</a>
-                    <a href="#resources" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Resources</a>
                     <a href="#timeline" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Timeline</a>
                     <a href="#organizers" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Organizers</a>
+                    <a href="#resources" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Resources</a>
                     <a href="#participate" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Participate</a>
                 </div>
                 <a href="#participate" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
@@ -178,18 +178,21 @@
             <!-- Challenge Introduction -->
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm mb-16">
                 <div class="max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Your Task</h3>
+                    <h3 class="text-2xl font-bold mb-8 text-center">Your Task</h3>
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
                         Synthesize <span class="font-semibold text-blue-600">pseudo-CT images</span> from
-                        non-attenuation-corrected PET, whole-body MRI, and 2D topograms. Your pseudo-CTs will be used to
+                        non-attenuation-corrected PET, whole-body MRI, and/or 2D topograms (X-Ray). Your pseudo-CTs will be used to
                         reconstruct PET images, which are evaluated against reference CT-based reconstructions across both
                         <span class="font-semibold">static and dynamic imaging protocols</span>.
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
                         You'll work with a unique <span class="font-semibold text-purple-600">multimodal dataset</span> of
                         99 healthy volunteers with age- and sex-stratified whole-body PET/CT and MRI acquisitions, along with
                         open-source reconstruction tools to enable closed-loop optimization—previously only possible at sites
                         with proprietary vendor software.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        <span class="font-semibold text-blue-600">No knowledge of PET reconstruction is needed</span> to be competitive in the challenge. Your task is simply to predict the CT image from one or more of the other available image modalities.
                     </p>
                 </div>
             </div>
@@ -255,15 +258,10 @@
 
             <!-- Overview -->
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
-                <h3 class="text-2xl font-bold mb-6">Challenge Abstract</h3>
-                <div class="prose prose-lg max-w-none text-gray-600">
-                    <p class="mb-4">
+                <h3 class="text-2xl font-bold mb-8 text-center">Challenge Abstract</h3>
+                <div class="max-w-none text-gray-600">
 
-
-
-
-
-
+                    <p class="text-lg leading-relaxed mb-6">
 
 The advent of Long Axial Field-of-View (LAFOV) PET scanners has shifted the dosimetry paradigm in PET/CT 
 imaging. The high sensitivity of these systems allows for substantial reductions in radiotracer activity, rendering 
@@ -274,10 +272,8 @@ as the attenuation map is typically derived directly from the CT. Similarly, who
 PET/MRI systems require estimation of the attenuation map from MR images. In both scenarios, the absence of 
 a CT poses a reconstruction challenge.
 
-
-
                     </p>
-                    <p class="mb-4">
+                    <p class="text-lg leading-relaxed mb-6">
 To address this, the Big Cross-Modal Attenuation Correction (BIC-MAC) challenge tasks participants with 
 synthesizing a 3D pseudo-CT from other available modalities. We present a novel multimodal dataset comprising 
 whole-body PET, CT, Topogram (scout radiograph), and MRI for 99 healthy volunteers. The cohort is age- and 
@@ -285,15 +281,17 @@ sex-stratified, with data acquired on Siemens Biograph Vision Quadra and Siemens
 scanners. Participants will receive a training set of 75 cases containing Non-Attenuation Corrected (NAC) 
 [18F]FDG PET images, scan-planning Topograms, and same-day DIXON MRI, alongside reference CT and CT-based attenuation-corrected PET (CTAC-PET) images. Critically, we also provide scatter maps, sinograms, and 
 Docker containers with open-source reconstruction software, enabling closed-loop optimization on the training 
-set - a capability previously restricted to hospital sites with access to proprietary vendor software.                    </p>
-                                        <p>
+set - a capability previously restricted to hospital sites with access to proprietary vendor software.
+                    </p>
+                    <p class="text-lg leading-relaxed">
 The challenge comprises a single task: generate a pseudo-CT from the available input modalities. The pseudo-CT will be used to reconstruct PET images, which are then quantitatively compared against reference CTAC-PET images. Both static and dynamic PET reconstructions are evaluated to assess downstream accuracy across 
 different clinical contexts. A defining technical characteristic of this challenge is the integration of modalities with 
 different dimensionalities and acquisition geometries. While the 3D NAC-PET and 2D Topograms are spatially 
 aligned with the target attenuation map, both lack anatomical detail. In contrast, whole-body MRI offers high 
 bone and soft-tissue contrast but is acquired in a different scanner geometry with different patient positioning 
 and body deformations. Consequently, participants must develop algorithms capable of fusing spatially 
-unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D Topograms.                    </p>
+unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D Topograms.
+                    </p>
                 </div>
             </div>
         </div>
@@ -749,19 +747,10 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </div>
             </div>
 
-            <!-- Call to Action -->
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-                <h3 class="text-3xl font-bold mb-4">Questions or Need Help?</h3>
-                <p class="text-xl mb-8 text-blue-100">
-                    Check out our GitHub repository for documentation, FAQs, and community discussions.
-                </p>
-                <a href="https://github.com/bic-mac-challenge/challenge-codebase" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors text-lg inline-flex items-center justify-center">
-                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    Visit GitHub
-                </a>
-            </div>
+            <!-- Contact -->
+            <p class="text-center text-gray-500 text-sm mt-4">
+                Questions? Contact us at <a href="mailto:bic-mac-challenge@outlook.com" class="text-blue-600 hover:underline">bic-mac-challenge@outlook.com</a>
+            </p>
         </div>
     </section>
 
