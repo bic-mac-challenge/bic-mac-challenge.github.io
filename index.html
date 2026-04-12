@@ -172,9 +172,10 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">About the Challenge</h2>
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Modern PET scanners are incredibly sensitive, but the CT component used for attenuation correction
-                    remains the dominant source of radiation. Can we eliminate the CT scan entirely while maintaining
-                    accurate PET reconstructions?
+                    To reconstruct an accurate total-body PET image, you need a CT scan to correct for photons being
+                    attenuated by dense tissue like bone. But CT adds radiation — undesirable for dose-sensitive
+                    populations like pediatric or obstetric patients — and combined PET/MRI scanners have no CT at all.
+                    In both scenarios, we need a robust generative algorithm that can synthesize CTs.
                 </p>
             </div>
 
@@ -183,19 +184,16 @@
                 <div class="max-w-4xl mx-auto">
                     <h3 class="text-2xl font-bold mb-8 text-center">Your Task</h3>
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Synthesize <span class="font-semibold text-blue-600">pseudo-CT images</span> from
-                        non-attenuation-corrected PET, whole-body MRI, and/or 2D topograms (X-Ray). Your pseudo-CTs will be used to
-                        reconstruct PET images, which are evaluated against reference CT-based reconstructions across both
-                        <span class="font-semibold">static and dynamic imaging protocols</span>.
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        You'll work with a unique <span class="font-semibold text-purple-600">multimodal dataset</span> of
-                        99 healthy volunteers with age- and sex-stratified whole-body PET/CT and MRI acquisitions, along with
-                        open-source reconstruction tools to enable closed-loop optimization—previously only possible at sites
-                        with proprietary vendor software.
+                        Build a generative AI model that synthesizes a <span class="font-semibold text-blue-600">3D pseudo-CT</span> from
+                        whole-body MRI, non-attenuation-corrected PET (NAC-PET), and/or 2D X-ray-like Topograms.
+                        <span class="font-semibold text-blue-600">No knowledge of PET reconstruction is required to compete.</span>
+                        The challenge is simply an image-to-image prediction task, and the reconstruction evaluation is handled for you.
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        <span class="font-semibold text-blue-600">No knowledge of PET reconstruction is needed</span> to be competitive in the challenge. Your task is simply to predict the CT image from one or more of the other available image modalities.
+                        You'll work with a novel, <span class="font-semibold text-purple-600">age- and sex-balanced dataset</span> of
+                        total-body PET/CT/MR images and PET sinograms from 99 healthy volunteers, along with open-source
+                        <a href="https://stir.sourceforge.net/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">STIR</a> reconstruction
+                        containers — enabling closed-loop PET reconstruction accessible to anyone with Docker.
                     </p>
                 </div>
             </div>
@@ -226,7 +224,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Multimodal Fusion</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Combine information from whole-body NAC-PET, MRI, and 2D Topograms to synthesize accurate pseudo-CT images for attenuation correction reconstruction.
+                        Tackle the challenge of fusing spatially unaligned information from 3D MRI with 3D NAC-PET and 2D Topograms to produce a coherent 3D pseudo-CT.
                     </p>
                 </div>
 
@@ -237,9 +235,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Closed-Loop Optimization</h3>
+                    <h3 class="text-xl font-bold mb-4">Open-Source Reconstruction</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Optimize directly on reconstructed PET images using provided <a href="https://stir.sourceforge.net/" target="_blank" class="text-blue-600 hover:underline">STIR</a> reconstruction containers - no need for proprietary vendor software.
+                        Evaluate the attenuation correction effect of your predicted CTs directly with local PET reconstruction via <a href="https://stir.sourceforge.net/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">STIR</a> — no proprietary vendor software required.
                     </p>
                 </div>
 
@@ -250,9 +248,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Dose Reduction</h3>
+                    <h3 class="text-xl font-bold mb-4">Novel Dataset</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Enable CT-less imaging to reduce radiation exposure for dose-sensitive populations, and enable attenuation correction in PET/MRI studies.
+                        Access a unique, age- and sex-balanced dataset with total-body PET/CT/MR images and PET sinograms from 99 healthy volunteers — purpose-built for this challenge.
                     </p>
                 </div>
             </div>
