@@ -93,9 +93,14 @@
                     <a href="#resources" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Resources</a>
                     <a href="#participate" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Participate</a>
                 </div>
-                <a href="#participate" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
-                    Register Now
-                </a>
+                <div class="flex items-center gap-4">
+                    <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer">
+                        <img src="images/miccai2026-logo.png" alt="MICCAI 2026" class="h-10 w-auto">
+                    </a>
+                    <a href="#participate" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
+                        Register Now
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -117,12 +122,9 @@
         <div class="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-purple-50/85 to-pink-50/90 backdrop-blur-sm"></div>
 
         <!-- Content -->
-        <div class="relative z-10 w-full px-6 lg:px-8 py-32">
+        <div class="relative z-10 w-full px-6 lg:px-8 pt-32 pb-16">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center fade-in">
-                    <div class="inline-block mb-4 px-4 py-2 bg-blue-50/80 backdrop-blur-sm rounded-full">
-                        <span class="text-blue-600 text-sm font-medium">MICCAI 2026 Challenge</span>
-                    </div>
                     <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                         Big Cross-Modal<br>
                         <span class="gradient-text">Attenuation Correction</span><br>
@@ -200,11 +202,11 @@
 
 
 
-<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 flex items-center justify-center min-h-[400px] mb-16">
+<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-2 md:p-8 flex items-center justify-center min-h-[400px] mb-16">
     <img 
         src="images/illustration.png" 
         alt="Diagram showing modalities workflow" 
-        class="max-w-full h-auto rounded-lg shadow-sm mix-blend-multiply"
+        class="max-w-full md:max-w-3xl h-auto rounded-lg shadow-sm mix-blend-multiply"
     >
 </div>
 
@@ -308,46 +310,45 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </p>
             </div>
 
-            <div class="space-y-6">
+            <div class="space-y-3">
                 <!-- Timeline Item 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-purple-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-purple-600">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Registration Opens</h3>
-                            <p class="text-gray-600">Registration opens via Google Forms</p>
+                            <h3 class="text-base font-bold">Registration Opens</h3>
+                            <p class="text-sm text-gray-600">Registration opens via Google Forms</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-purple-50 text-purple-700 px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-sm font-semibold">
                                 April 1, 2026
                             </span>
                         </div>
                     </div>
                 </div>
                 <!-- Timeline Item 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-600">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Challenge starts (data released)</h3>
-                            <p class="text-gray-600">Training (n=75) and validation (n=4) cases released on Hugging Face</p>
+                            <h3 class="text-base font-bold">Challenge starts (data released)</h3>
+                            <p class="text-sm text-gray-600">Training (n=75) and validation (n=4) cases released on Hugging Face</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-sm font-semibold">
                                 April 8, 2026
                             </span>
                         </div>
                     </div>
                 </div>
 
-
                 <!-- Timeline Item 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-pink-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-pink-600">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Pre-evaluation Period Opens</h3>
-                            <p class="text-gray-600">Teams can submit for pre-evaluation on validation data</p>
+                            <h3 class="text-base font-bold">Pre-evaluation Period Opens</h3>
+                            <p class="text-sm text-gray-600">Teams can submit for pre-evaluation on validation data</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-pink-50 text-pink-700 px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-pink-50 text-pink-700 px-3 py-1 rounded-lg text-sm font-semibold">
                                 May 15, 2026
                             </span>
                         </div>
@@ -355,14 +356,14 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </div>
 
                 <!-- Timeline Item 4 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-indigo-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-indigo-600">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Final Evaluation Period Opens</h3>
-                            <p class="text-gray-600">Teams can submit Docker containers for final evaluation on test set</p>
+                            <h3 class="text-base font-bold">Final Evaluation Period Opens</h3>
+                            <p class="text-sm text-gray-600">Teams can submit Docker containers for final evaluation on test set</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-indigo-50 text-indigo-700 px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-indigo-50 text-indigo-700 px-3 py-1 rounded-lg text-sm font-semibold">
                                 June 15, 2026
                             </span>
                         </div>
@@ -370,14 +371,14 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </div>
 
                 <!-- Timeline Item 5 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-green-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-green-600">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Registration Closes</h3>
-                            <p class="text-gray-600">Final deadline for team registration</p>
+                            <h3 class="text-base font-bold">Registration Closes</h3>
+                            <p class="text-sm text-gray-600">Final deadline for team registration</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-green-50 text-green-700 px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-green-50 text-green-700 px-3 py-1 rounded-lg text-sm font-semibold">
                                 August 15, 2026
                             </span>
                         </div>
@@ -385,14 +386,14 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </div>
 
                 <!-- Timeline Item 6 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border-l-4 border-orange-600">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-orange-600">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Submission Deadline</h3>
-                            <p class="text-gray-600">Pre-evaluation and final evaluation close</p>
+                            <h3 class="text-base font-bold">Submission Deadline</h3>
+                            <p class="text-sm text-gray-600">Pre-evaluation and final evaluation close</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-orange-50 text-orange-700 px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-sm font-semibold">
                                 August 15, 2026
                             </span>
                         </div>
@@ -400,14 +401,14 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </div>
 
                 <!-- Timeline Item 7 -->
-                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 shadow-lg text-white">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-4 shadow-lg text-white">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Winners Announced</h3>
-                            <p class="text-blue-100">CodaBench leaderboard updated with test scores; top three winners announced</p>
+                            <h3 class="text-base font-bold">Winners Announced</h3>
+                            <p class="text-sm text-blue-100">CodaBench leaderboard updated with test scores; top three winners announced</p>
                         </div>
-                        <div class="mt-4 md:mt-0 md:ml-8">
-                            <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg font-semibold">
+                        <div class="ml-6 shrink-0">
+                            <span class="inline-block bg-white/20 backdrop-blur-sm px-3 py-1 rounded-lg text-sm font-semibold">
                                 September 1, 2026
                             </span>
                         </div>
@@ -418,149 +419,149 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
     </section>
 
     <!-- Organizers Section -->
-    <section id="organizers" class="py-20 px-6 lg:px-8 bg-gray-50">
+    <section id="organizers" class="py-12 px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Organizing Committee</h2>
+            <div class="text-center mb-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-2">Organizing Committee</h2>
                 <p class="text-xl text-gray-600">
                     Meet the team behind the challenge
                 </p>
             </div>
 
             <!-- Organizing Committee -->
-            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Christian_person.png" alt="Christian Hinge" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Christian Hinge</h4>
-                        <p class="text-gray-600 text-sm mb-2">PhD Student, Rigshospitalet</p>
-                        <p class="text-gray-500 text-sm">Lead Organizer</p>
+                        <h4 class="font-bold text-sm mb-0.5">Christian Hinge</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">PhD Student, Rigshospitalet</p>
+                        <p class="text-gray-500 text-xs">Lead Organizer</p>
                     </div>
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Claes_person.png" alt="Claes Nøhr Ladefoged" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Claes Nøhr Ladefoged</h4>
-                        <p class="text-gray-600 text-sm mb-2">Associate Professor, Technical University of Denmark</p>
-                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                        <h4 class="font-bold text-sm mb-0.5">Claes Nøhr Ladefoged</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Associate Professor, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-xs">Co-Organizer</p>
                     </div>
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Flemming_person.png" alt="Flemming Littrup Andersen" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Flemming Littrup Andersen</h4>
-                        <p class="text-gray-600 text-sm mb-2">Professor, Rigshospitalet</p>
-                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                        <h4 class="font-bold text-sm mb-0.5">Flemming Littrup Andersen</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Professor, Rigshospitalet</p>
+                        <p class="text-gray-500 text-xs">Co-Organizer</p>
                     </div>
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Georg_person.jpg" alt="Georg Schramm" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Georg Schramm</h4>
-                        <p class="text-gray-600 text-sm mb-2">Assistant Professor, KU Leuven</p>
-                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                        <h4 class="font-bold text-sm mb-0.5">Georg Schramm</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Assistant Professor, KU Leuven</p>
+                        <p class="text-gray-500 text-xs">Co-Organizer</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/vaibhav.jpeg" alt="Vaibhav Bahel" class="w-full object-cover" style="transform: scale(1.4) translateY(20px);">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Vaibhav Bahel</h4>
-                        <p class="text-gray-600 text-sm mb-2">Student, Technical University of Denmark</p>
-                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                        <h4 class="font-bold text-sm mb-0.5">Vaibhav Bahel</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Student, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-xs">Co-Organizer</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Nanna_person.png" alt="Nanna Overbeck Petersen" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Nanna Overbeck Petersen</h4>
-                        <p class="text-gray-600 text-sm mb-2">PhD Student, Rigshospitalet</p>
-                        <p class="text-gray-500 text-sm">Co-Organizer</p>
+                        <h4 class="font-bold text-sm mb-0.5">Nanna Overbeck Petersen</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">PhD Student, Rigshospitalet</p>
+                        <p class="text-gray-500 text-xs">Co-Organizer</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/kris.jpeg" alt="Kris Thielemans" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Kris Thielemans</h4>
-                        <p class="text-gray-600 text-sm mb-2">Professor, University College London</p>
-                        <p class="text-gray-500 text-sm">STIR Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Kris Thielemans</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Professor, University College London</p>
+                        <p class="text-gray-500 text-xs">STIR Team</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/tsoumpas.webp" alt="Charalampos Tsoumpas" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Charalampos Tsoumpas</h4>
-                        <p class="text-gray-600 text-sm mb-2">Professor, University of Groningen</p>
-                        <p class="text-gray-500 text-sm">STIR Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Charalampos Tsoumpas</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Professor, University of Groningen</p>
+                        <p class="text-gray-500 text-xs">STIR Team</p>
                     </div>
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden bg-gray-200 flex items-center justify-center">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden bg-gray-200 flex items-center justify-center">
                             <svg class="w-16 h-16 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Zekai Li</h4>
-                        <p class="text-gray-600 text-sm mb-2">PhD Candidate, University of Groningen</p>
-                        <p class="text-gray-500 text-sm">STIR Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Zekai Li</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">PhD Candidate, University of Groningen</p>
+                        <p class="text-gray-500 text-xs">STIR Team</p>
                     </div>
 
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/nikos.jpeg" alt="Nikos Efthymiou" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Nikos Efthymiou</h4>
-                        <p class="text-gray-600 text-sm mb-2">Senior Scientist, University of Groningen</p>
-                        <p class="text-gray-500 text-sm">STIR Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Nikos Efthymiou</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Senior Scientist, University of Groningen</p>
+                        <p class="text-gray-500 text-xs">STIR Team</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/felipe.webp" alt="Felipe Delestro Matos" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Felipe Delestro Matos</h4>
-                        <p class="text-gray-600 text-sm mb-2">Senior Researcher, Technical University of Denmark</p>
-                        <p class="text-gray-500 text-sm">Infrastructure Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Felipe Delestro Matos</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Senior Researcher, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-xs">Infrastructure Team</p>
                     </div>
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/jakob.webp" alt="Jakob Sauer Jørgensen" class="w-full h-full object-cover object-center">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Jakob Sauer Jørgensen</h4>
-                        <p class="text-gray-600 text-sm mb-2">Associate Professor, Technical University of Denmark</p>
-                        <p class="text-gray-500 text-sm">Infrastructure Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Jakob Sauer Jørgensen</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Associate Professor, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-xs">Infrastructure Team</p>
                     </div>
 
                     <div class="text-center">
-                        <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/kjer.jpeg" alt="Hans Martin Kjer" class="w-full h-full object-cover object-top">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Hans Martin Kjer</h4>
-                        <p class="text-gray-600 text-sm mb-2">Associate Professor, Technical University of Denmark</p>
-                        <p class="text-gray-500 text-sm">Infrastructure Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Hans Martin Kjer</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Associate Professor, Technical University of Denmark</p>
+                        <p class="text-gray-500 text-xs">Infrastructure Team</p>
                     </div>
 
                     <div class="text-center">
-                       <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                       <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Kirsten_person.jpeg" alt="Kirsten Korsholm" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Kirsten Korsholm</h4>
-                        <p class="text-gray-600 text-sm mb-2">MD, Rigshospitalet</p>
-                        <p class="text-gray-500 text-sm">Clinical Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Kirsten Korsholm</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">MD, Rigshospitalet</p>
+                        <p class="text-gray-500 text-xs">Clinical Team</p>
                     </div>
 
                     <div class="text-center">
-                       <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                       <div class="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                             <img src="images/organizers/Ian_person.jpeg" alt="Ian Law" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold text-lg mb-1">Ian Law</h4>
-                        <p class="text-gray-600 text-sm mb-2">Professor, Rigshospitalet</p>
-                        <p class="text-gray-500 text-sm">Clinical Team</p>
+                        <h4 class="font-bold text-sm mb-0.5">Ian Law</h4>
+                        <p class="text-gray-600 text-xs mb-0.5">Professor, Rigshospitalet</p>
+                        <p class="text-gray-500 text-xs">Clinical Team</p>
                     </div>
 
 
@@ -571,10 +572,10 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
     </section>
 
     <!-- Resources Section -->
-    <section id="resources" class="py-20 px-6 lg:px-8">
+    <section id="resources" class="py-12 px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Resources & Documentation</h2>
+            <div class="text-center mb-8">
+                <h2 class="text-4xl md:text-5xl font-bold mb-2">Resources & Documentation</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Everything you need to participate in the challenge
                 </p>
@@ -582,19 +583,19 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Codabench Card -->
-                <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 md:p-10 text-white shadow-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4">
+                <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 md:p-8 text-white shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold">Codabench</h3>
                     </div>
-                    <p class="text-lg text-blue-100 mb-6">
+                    <p class="text-lg text-blue-100 mb-4">
                         Official challenge platform:
                     </p>
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-2 mb-6">
                         <li class="flex items-start">
                             <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -623,19 +624,19 @@ unaligned information from 3D volumetric MRI with that of the 3D NAC-PET and 2D 
                 </div>
 
                 <!-- GitHub Card -->
-                <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
                             <svg class="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900">GitHub</h3>
                     </div>
-                    <p class="text-lg text-gray-600 mb-6">
+                    <p class="text-lg text-gray-600 mb-4">
                         Ressources for getting started:
                     </p>
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-2 mb-6">
                         <li class="flex items-start">
                             <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
