@@ -87,6 +87,8 @@
             <div class="flex justify-between items-center h-16">
                 <a href="#" class="text-xl font-bold gradient-text">BIC-MAC</a>
                 <div class="hidden md:flex space-x-8">
+                    <a href="#session" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Session</a>
+                    <a href="#leaderboard" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Leaderboard</a>
                     <a href="#about" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">About</a>
                     <a href="#timeline" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Timeline</a>
                     <a href="#organizers" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium">Organizers</a>
@@ -97,8 +99,8 @@
                     <a href="https://conferences.miccai.org/2026/en/default.asp" target="_blank" rel="noopener noreferrer">
                         <img src="images/miccai2026-logo.png" alt="MICCAI 2026" class="h-10 w-auto">
                     </a>
-                    <a href="#participate" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
-                        Register Now
+                    <a href="#leaderboard" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
+                        Leaderboard
                     </a>
                 </div>
             </div>
@@ -134,8 +136,8 @@
                         Synthesize pseudo-CT from NAC-PET, MRI, and 2D Topogram to enable CT-less reconstruction of PET images.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <a href="#participate" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-shadow text-lg">
-                            Register Now
+                        <a href="#leaderboard" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-shadow text-lg">
+                            View Leaderboard
                         </a>
                         <a href="https://github.com/bic-mac-challenge/challenge-codebase" target="_blank" rel="noopener noreferrer" class="bg-white/80 backdrop-blur-sm border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-medium hover:bg-white hover:border-gray-400 transition-all text-lg inline-flex items-center justify-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -182,6 +184,291 @@
         </div>
     </section>
 
+    <!-- MICCAI 2026 Challenge Session Section -->
+    <section id="session" class="py-8 px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg p-6 md:p-8 text-white text-center">
+                <p class="uppercase tracking-widest text-xs font-semibold text-blue-100 mb-2">Join us in person</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-1">Challenge Session at MICCAI 2026</h2>
+                <p class="text-sm text-blue-100 mb-5">Strasbourg, France</p>
+
+                <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 text-sm font-medium">
+                    <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+                        📅 September 27, 2026
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+                        🕗 8:00 - 10:00 AM
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+                        📍 Room Berlin
+                    </span>
+                </div>
+
+                <div id="session-countdown" class="flex justify-center gap-3 md:gap-6 mb-3">
+                    <!-- populated by JS -->
+                </div>
+
+                <p class="text-xs text-blue-100/80">Full program released soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Session Countdown Script -->
+    <script>
+        const sessionDate = new Date('2026-09-27T08:00:00+02:00'); // MICCAI 2026, Strasbourg (CEST, UTC+2)
+
+        function updateSessionCountdown() {
+            const el = document.getElementById('session-countdown');
+            if (!el) return;
+            const diff = sessionDate - new Date();
+
+            if (diff <= 0) {
+                el.innerHTML = `<div class="text-xl md:text-2xl font-semibold">See you at the session!</div>`;
+                return;
+            }
+
+            const units = [
+                { value: Math.floor(diff / 86400000), label: 'Days' },
+                { value: Math.floor(diff / 3600000) % 24, label: 'Hours' },
+                { value: Math.floor(diff / 60000) % 60, label: 'Minutes' },
+                { value: Math.floor(diff / 1000) % 60, label: 'Seconds' },
+            ];
+
+            el.innerHTML = units.map(u => `
+                <div class="text-center">
+                    <div class="text-2xl md:text-3xl font-bold tabular-nums">${String(u.value).padStart(2, '0')}</div>
+                    <div class="text-xs uppercase tracking-wide text-blue-100 mt-1">${u.label}</div>
+                </div>
+            `).join('');
+        }
+
+        updateSessionCountdown();
+        setInterval(updateSessionCountdown, 1000);
+    </script>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard" class="py-20 px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Final Leaderboard</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    The challenge has concluded. Congratulations to all participating teams! A deeper statistical
+                    analysis of these results will be presented at the
+                    <a href="#session" class="text-blue-600 hover:underline">MICCAI 2026 Challenge Session</a>.
+                </p>
+            </div>
+
+            <div class="flex items-center justify-center gap-2 mb-6 text-sm text-gray-500">
+                <span class="w-4 h-4 rounded border-l-4 border-blue-400 bg-blue-50 inline-block"></span>
+                Tier 1: teams statistically indistinguishable from one another and from the leader (no significant
+                gap in a multiple-comparison-corrected permutation test, α = 0.05).
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-gray-200" id="leaderboard-head">
+                                <!-- populated by JS -->
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body" class="divide-y divide-gray-100">
+                            <!-- populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="text-sm text-gray-500 max-w-4xl mx-auto mt-6 leading-relaxed">
+                <span class="font-semibold text-gray-600">Metrics:</span>
+                <span class="font-medium">CT μ-map MAE</span>: mean absolute error of the synthesized CT attenuation map.
+                <span class="font-medium">Brain Outlier Score</span>: degree of anomalous voxels in the reconstructed brain PET.
+                <span class="font-medium">Organ Bias (MARE %)</span>: mean absolute relative error of organ-wise SUV bias.
+                <span class="font-medium">Whole-body SUV MAE</span>: mean absolute error of whole-body SUV in the reconstructed PET.
+                Position is derived from the Average Rank across all four metrics.
+            </p>
+        </div>
+    </section>
+
+    <!-- Leaderboard Data + Sorting -->
+    <script>
+        const leaderboardColumns = [
+            { key: 'team', label: 'Team', type: 'string' },
+            { key: 'rank', label: 'Position', type: 'number', format: v => ordinal(v) },
+            { key: 'avgRank', label: 'Avg. Rank', type: 'number', format: v => v.toFixed(2) },
+            { key: 'ctMaeValue', label: 'CT μ-map MAE', type: 'number', rankKey: 'ctMaeRank', digits: 5 },
+            { key: 'brainOutlierValue', label: 'Brain Outlier Score', type: 'number', rankKey: 'brainOutlierRank', digits: 4 },
+            { key: 'organBiasValue', label: 'Organ Bias (MARE %)', type: 'number', rankKey: 'organBiasRank', digits: 2 },
+            { key: 'suvMaeValue', label: 'Whole-body SUV MAE', type: 'number', rankKey: 'suvMaeRank', digits: 4 },
+        ];
+
+        const leaderboardData = [
+            { team: 'DreamLab', rank: 1, avgRank: 4.0, ctMaeValue: 0.00595, ctMaeRank: 12, brainOutlierValue: 0.0130, brainOutlierRank: 2, organBiasValue: 1.8319, organBiasRank: 1, suvMaeValue: 0.0272, suvMaeRank: 1 },
+            { team: 'ntkhoa', rank: 1, avgRank: 4.0, ctMaeValue: 0.00578, ctMaeRank: 7, brainOutlierValue: 0.0201, brainOutlierRank: 5, organBiasValue: 1.8544, organBiasRank: 2, suvMaeValue: 0.0275, suvMaeRank: 2 },
+            { team: 'CMIT', rank: 3, avgRank: 4.25, ctMaeValue: 0.00585, ctMaeRank: 9, brainOutlierValue: 0.0125, brainOutlierRank: 1, organBiasValue: 1.9199, organBiasRank: 3, suvMaeValue: 0.0290, suvMaeRank: 4 },
+            { team: 'mhamidasn', rank: 4, avgRank: 4.5, ctMaeValue: 0.00552, ctMaeRank: 2, brainOutlierValue: 0.0167, brainOutlierRank: 3, organBiasValue: 2.2775, organBiasRank: 7, suvMaeValue: 0.0302, suvMaeRank: 6 },
+            { team: 'VUB-ETRO', rank: 5, avgRank: 5.75, ctMaeValue: 0.00578, ctMaeRank: 6, brainOutlierValue: 0.0186, brainOutlierRank: 4, organBiasValue: 2.1086, organBiasRank: 6, suvMaeValue: 0.0302, suvMaeRank: 7 },
+            { team: 'heyufan1995', rank: 6, avgRank: 6.25, ctMaeValue: 0.00570, ctMaeRank: 3, brainOutlierValue: 0.0265, brainOutlierRank: 9, organBiasValue: 2.2910, organBiasRank: 8, suvMaeValue: 0.0301, suvMaeRank: 5 },
+            { team: 'TUM', rank: 6, avgRank: 6.25, ctMaeValue: 0.00591, ctMaeRank: 10, brainOutlierValue: 0.0249, brainOutlierRank: 8, organBiasValue: 1.9454, organBiasRank: 4, suvMaeValue: 0.0284, suvMaeRank: 3 },
+            { team: 'bic-manc', rank: 8, avgRank: 7.0, ctMaeValue: 0.00571, ctMaeRank: 4, brainOutlierValue: 0.0210, brainOutlierRank: 6, organBiasValue: 2.3103, organBiasRank: 9, suvMaeValue: 0.0318, suvMaeRank: 9 },
+            { team: 'mbeguin', rank: 9, avgRank: 9.5, ctMaeValue: 0.00660, ctMaeRank: 16, brainOutlierValue: 0.0229, brainOutlierRank: 7, organBiasValue: 1.9818, organBiasRank: 5, suvMaeValue: 0.0327, suvMaeRank: 10 },
+            { team: 'NTUA Biomedical Lab', rank: 10, avgRank: 9.75, ctMaeValue: 0.00591, ctMaeRank: 11, brainOutlierValue: 0.0308, brainOutlierRank: 10, organBiasValue: 2.4272, organBiasRank: 10, suvMaeValue: 0.0317, suvMaeRank: 8 },
+            { team: 'fauprl', rank: 11, avgRank: 11.25, ctMaeValue: 0.00533, ctMaeRank: 1, brainOutlierValue: 0.0569, brainOutlierRank: 15, organBiasValue: 3.5524, organBiasRank: 16, suvMaeValue: 0.0397, suvMaeRank: 13 },
+            { team: 'UniMuForge', rank: 12, avgRank: 11.5, ctMaeValue: 0.00618, ctMaeRank: 13, brainOutlierValue: 0.0382, brainOutlierRank: 11, organBiasValue: 2.5954, organBiasRank: 11, suvMaeValue: 0.0344, suvMaeRank: 11 },
+            { team: 'LLATMU', rank: 13, avgRank: 13.0, ctMaeValue: 0.00654, ctMaeRank: 15, brainOutlierValue: 0.0459, brainOutlierRank: 13, organBiasValue: 2.7655, organBiasRank: 12, suvMaeValue: 0.0368, suvMaeRank: 12 },
+            { team: 'Stellar', rank: 14, avgRank: 14.0, ctMaeValue: 0.00579, ctMaeRank: 8, brainOutlierValue: 0.0543, brainOutlierRank: 14, organBiasValue: 4.3012, organBiasRank: 17, suvMaeValue: 0.0461, suvMaeRank: 17 },
+            { team: '3DV-BIC', rank: 15, avgRank: 14.25, ctMaeValue: 0.00575, ctMaeRank: 5, brainOutlierValue: 0.0570, brainOutlierRank: 16, organBiasValue: 5.0629, organBiasRank: 18, suvMaeValue: 0.0537, suvMaeRank: 18 },
+            { team: 'I3M', fullName: 'I3M, CSIC-Universitat Politècnica de València', rank: 16, avgRank: 14.75, ctMaeValue: 0.00674, ctMaeRank: 17, brainOutlierValue: 0.0416, brainOutlierRank: 12, organBiasValue: 3.1954, organBiasRank: 14, suvMaeValue: 0.0424, suvMaeRank: 16 },
+            { team: 'Mrlonely', rank: 17, avgRank: 15.0, ctMaeValue: 0.00651, ctMaeRank: 14, brainOutlierValue: 0.0682, brainOutlierRank: 17, organBiasValue: 3.4755, organBiasRank: 15, suvMaeValue: 0.0404, suvMaeRank: 14 },
+            { team: 'nikonsta', rank: 18, avgRank: 16.0, ctMaeValue: 0.00723, ctMaeRank: 18, brainOutlierValue: 0.1065, brainOutlierRank: 18, organBiasValue: 3.1459, organBiasRank: 13, suvMaeValue: 0.0422, suvMaeRank: 15 },
+        ];
+
+        // Reference baseline, not part of the ranking scheme.
+        const baselineRow = {
+            team: 'baseline',
+            ctMaeValue: 0.00664, brainOutlierValue: 0.1194, organBiasValue: 3.9302, suvMaeValue: 0.0467,
+        };
+
+        // Tier 1: teams statistically indistinguishable from one another and from the leader
+        // (no significant gap in a multiple-comparison-corrected permutation test at the 5%
+        // level). Ranking below the first team with a significant gap puts a team in a lower
+        // tier. TODO: this cutoff (currently the top 8 positions) is a placeholder inferred
+        // from the rank pattern, not from actual permutation-test results - confirm/replace
+        // with the real cutoff once the significance test has been run.
+        const TIER1_CUTOFF = 8;
+
+        function ordinal(n) {
+            const s = ['th', 'st', 'nd', 'rd'];
+            const v = n % 100;
+            return n + (s[(v - 20) % 10] || s[v] || s[0]);
+        }
+
+        function medalFor(position) {
+            if (position === 1) return { emoji: '🥇', title: 'Gold' };
+            if (position === 3) return { emoji: '🥉', title: 'Bronze' };
+            return null;
+        }
+
+        function rankBadgeClasses(r) {
+            if (r === 1) return 'bg-amber-100 text-amber-700';
+            if (r <= 3) return 'bg-purple-100 text-purple-700';
+            return 'bg-gray-100 text-gray-500';
+        }
+
+        let sortState = { key: 'rank', dir: 'asc' };
+
+        function renderLeaderboardHead() {
+            const head = document.getElementById('leaderboard-head');
+            head.innerHTML = leaderboardColumns.map(col => {
+                const active = sortState.key === col.key;
+                const sortArrow = active ? (sortState.dir === 'asc' ? '▲' : '▼') : '';
+                return `<th data-key="${col.key}" scope="col"
+                        class="px-4 py-3 font-semibold text-gray-700 whitespace-nowrap cursor-pointer select-none hover:bg-gray-100 transition-colors ${col.key === 'team' ? 'text-left' : 'text-center'}">
+                        <span class="inline-flex items-center gap-1 ${col.key === 'team' ? '' : 'justify-center w-full'}">
+                            ${col.label}
+                            <span class="text-[10px] text-primary w-3 inline-block">${sortArrow}</span>
+                        </span>
+                    </th>`;
+            }).join('');
+
+            head.querySelectorAll('th').forEach(th => {
+                th.addEventListener('click', () => {
+                    const key = th.dataset.key;
+                    if (sortState.key === key) {
+                        sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        sortState = { key, dir: 'asc' };
+                    }
+                    renderLeaderboard();
+                });
+            });
+        }
+
+        function renderLeaderboardBody() {
+            const col = leaderboardColumns.find(c => c.key === sortState.key);
+            const dir = sortState.dir === 'asc' ? 1 : -1;
+
+            // The baseline has no Position / Avg. Rank (it's outside the ranking scheme),
+            // so when sorting by those columns it's always pinned last. For every other
+            // column it sorts alongside the teams using its actual value.
+            let sorted;
+            if (col.key === 'rank' || col.key === 'avgRank') {
+                const ranked = [...leaderboardData].sort((a, b) => (a[col.key] - b[col.key]) * dir);
+                sorted = [...ranked, { ...baselineRow, isBaseline: true }];
+            } else {
+                const allRows = [...leaderboardData, { ...baselineRow, isBaseline: true }];
+                sorted = allRows.sort((a, b) => {
+                    const av = a[col.key], bv = b[col.key];
+                    if (col.type === 'string') return av.localeCompare(bv) * dir;
+                    return (av - bv) * dir;
+                });
+            }
+
+            const body = document.getElementById('leaderboard-body');
+            body.innerHTML = sorted.map(row => row.isBaseline ? renderBaselineRow() : renderTeamRow(row)).join('');
+        }
+
+        function renderTeamRow(row) {
+            const isTier1 = row.rank <= TIER1_CUTOFF;
+            const rowTint = isTier1 ? 'bg-blue-50/60' : '';
+            const stripe = isTier1 ? 'border-l-4 border-blue-400' : 'border-l-4 border-transparent';
+            const cells = leaderboardColumns.map(c => {
+                if (c.key === 'team') {
+                    const teamLabel = row.fullName
+                        ? `<span class="cursor-help border-b border-dotted border-gray-400" title="${row.fullName}">${row.team}</span>`
+                        : row.team;
+                    return `<td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ${stripe}">${teamLabel}</td>`;
+                }
+                if (c.key === 'rank') {
+                    const medal = medalFor(row.rank);
+                    return `<td class="px-4 py-3 whitespace-nowrap">
+                        <span class="inline-flex items-center justify-center w-full">
+                            <span class="inline-block w-4 shrink-0 text-center text-xs" title="${medal ? medal.title : ''}">${medal ? medal.emoji : ''}</span>
+                            <span class="font-bold gradient-text">${ordinal(row.rank)}</span>
+                        </span>
+                    </td>`;
+                }
+                if (c.key === 'avgRank') {
+                    return `<td class="px-4 py-3 text-center text-gray-600">${row.avgRank.toFixed(2)}</td>`;
+                }
+                const rank = row[c.rankKey];
+                return `<td class="px-4 py-3 whitespace-nowrap">
+                    <span class="inline-flex items-center justify-center w-full">
+                        <span class="text-gray-800">${row[c.key].toFixed(c.digits)}</span>
+                        <span class="ml-1.5 inline-flex items-center justify-center w-9 h-4 shrink-0 rounded-full text-[10px] font-semibold ${rankBadgeClasses(rank)}">${ordinal(rank)}</span>
+                    </span>
+                </td>`;
+            }).join('');
+            return `<tr class="hover:bg-gray-100/70 transition-colors ${rowTint}">${cells}</tr>`;
+        }
+
+        function renderBaselineRow() {
+            const cells = leaderboardColumns.map(c => {
+                if (c.key === 'team') {
+                    return `<td class="px-4 py-3 font-medium text-gray-400 italic whitespace-nowrap border-l-4 border-transparent">baseline
+                        <span class="ml-1.5 text-[10px] not-italic uppercase tracking-wide text-gray-400">reference, unranked</span></td>`;
+                }
+                if (c.key === 'rank' || c.key === 'avgRank') {
+                    return `<td class="px-4 py-3 text-center text-gray-400">–</td>`;
+                }
+                return `<td class="px-4 py-3 whitespace-nowrap">
+                    <span class="inline-flex items-center justify-center w-full">
+                        <span class="text-gray-400">${baselineRow[c.key].toFixed(c.digits)}</span>
+                        <span class="ml-1.5 inline-block w-9 h-4 shrink-0"></span>
+                    </span>
+                </td>`;
+            }).join('');
+            return `<tr class="bg-gray-50 text-gray-400">${cells}</tr>`;
+        }
+
+        function renderLeaderboard() {
+            renderLeaderboardHead();
+            renderLeaderboardBody();
+        }
+
+        renderLeaderboard();
+    </script>
+
     <!-- About Section -->
     <section id="about" class="py-20 px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
@@ -189,8 +476,8 @@
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">About the Challenge</h2>
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                     To reconstruct an accurate total-body PET image, you need a CT scan to correct for photons being
-                    attenuated by dense tissue like bone. But CT adds radiation — undesirable for dose-sensitive
-                    populations like pediatric or obstetric patients — and combined PET/MRI scanners have no CT at all.
+                    attenuated by dense tissue like bone. But CT adds radiation - undesirable for dose-sensitive
+                    populations like pediatric or obstetric patients - and combined PET/MRI scanners have no CT at all.
                     In both scenarios, we need a robust generative algorithm that can synthesize CTs.
                 </p>
             </div>
@@ -209,7 +496,7 @@
                         You'll work with a novel, <span class="font-semibold text-purple-600">age- and sex-balanced dataset</span> of
                         total-body PET/CT/MR images and PET sinograms from 99 healthy volunteers, along with open-source
                         <a href="https://stir.sourceforge.net/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">STIR</a> reconstruction
-                        containers — enabling closed-loop PET reconstruction accessible to anyone with Docker.
+                        containers - enabling closed-loop PET reconstruction accessible to anyone with Docker.
                     </p>
                 </div>
             </div>
@@ -253,7 +540,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Open-Source Reconstruction</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Evaluate the attenuation correction effect of your predicted CTs directly with local PET reconstruction via <a href="https://stir.sourceforge.net/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">STIR</a> — no proprietary vendor software required.
+                        Evaluate the attenuation correction effect of your predicted CTs directly with local PET reconstruction via <a href="https://stir.sourceforge.net/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">STIR</a> - no proprietary vendor software required.
                     </p>
                 </div>
 
@@ -266,7 +553,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Novel Dataset</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Access a unique, age- and sex-balanced dataset with total-body PET/CT/MR images and PET sinograms from 99 healthy volunteers — purpose-built for this challenge.
+                        Access a unique, age- and sex-balanced dataset with total-body PET/CT/MR images and PET sinograms from 99 healthy volunteers - purpose-built for this challenge.
                     </p>
                 </div>
             </div>
@@ -297,8 +584,10 @@ whole-body PET, CT, Topogram (scout radiograph), and MRI for 99 healthy voluntee
 sex-stratified, with data acquired on Siemens Biograph Vision Quadra and Siemens MAGNETOM Vida 
 scanners. Participants will receive a training set of 75 cases containing Non-Attenuation Corrected (NAC) 
 [18F]FDG PET images, scan-planning Topograms, and same-day DIXON MRI, alongside reference CT and CT-based attenuation-corrected PET (CTAC-PET) images. Critically, we also provide scatter maps, sinograms, and 
-Docker containers with open-source reconstruction software, enabling closed-loop optimization on the training 
-set - a capability previously restricted to hospital sites with access to proprietary vendor software.
+Docker containers with open-source reconstruction software, enabling closed-loop optimization on the training
+set - a capability previously restricted to hospital sites with access to proprietary vendor software. The
+held-out test set comprises 20 subjects, distributed uniformly across sex and four age groups, drawn from the
+same cohort described in our multimodal healthy-controls dataset paper in Scientific Data.
                     </p>
                     <p class="text-lg leading-relaxed">
 The challenge comprises a single task: generate a pseudo-CT from the available input modalities. The pseudo-CT will be used to reconstruct PET images, which are then quantitatively compared against reference CTAC-PET images. Both static and dynamic PET reconstructions are evaluated to assess downstream accuracy across 
